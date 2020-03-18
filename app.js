@@ -9,7 +9,8 @@ let z = 0
 document.getElementById("bgColor").style.borderRadius = 0;
 
 function radChange (a) {
- if (z < 100) {
+    document.getElementById("currentRad").textContent = "radius = " + z + 'mm';
+ if (z < 101) {
     document.getElementById("bgColor").style.borderRadius = a + z + "px";
     z = parseInt(document.getElementById("bgColor").style.borderRadius.valueOf().replace("px", ""));
     console.log(document.getElementById("bgColor").style.borderRadius.valueOf());
@@ -17,16 +18,10 @@ function radChange (a) {
      else {
         z = 0
         document.getElementById("bgColor").style.borderRadius = z;
-        alert("Stop right there criminal scum! Its geometry POLICE! We will take all of your millimeters");
+        document.getElementById("currentRad").textContent = "radius = " + z + 'mm';
+        alert("Stop right there criminal scum! Its geometry POLICE! We will take all of your curves...");
      }
 
-    //   } else {
-    //     //  block of code to be executed if the condition is false
-    //   }
-    // document.getElementById("bgColor").style.borderRadius = a + z + "px";
-    // z = parseInt(document.getElementById("bgColor").style.borderRadius.valueOf().replace("px", ""));
-    // console.log(document.getElementById("bgColor").style.borderRadius.valueOf());
-    // console.log(z);
 };
 
 
@@ -37,9 +32,5 @@ function changeBgColorResult () {
     document.getElementById("colorCode").textContent = "Hex color code " + a;
 
     console.log(a);
-
-    // let b = getRandomRadius() + 'px'
-    // console.log(b);
-    // document.getElementById("bgColor").style.borderRadius = b;
 };
 

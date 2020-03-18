@@ -9,18 +9,20 @@ let z = 0
 document.getElementById("bgColor").style.borderRadius = 0;
 
 function radChange (a) {
-    document.getElementById("currentRad").textContent = "radius = " + z + 'mm';
- if (z < 101) {
+    // document.getElementById("currentRad").textContent = "radius = " + z + 'mm';
+
     document.getElementById("bgColor").style.borderRadius = a + z + "px";
     z = parseInt(document.getElementById("bgColor").style.borderRadius.valueOf().replace("px", ""));
     console.log(document.getElementById("bgColor").style.borderRadius.valueOf());
-    console.log(z);}
-     else {
+    console.log(z);
+    
+     if (z >= 105) {
         z = 0
         document.getElementById("bgColor").style.borderRadius = z;
         document.getElementById("currentRad").textContent = "radius = " + z + 'mm';
         alert("Stop right there criminal scum! Its geometry POLICE! We will take all of your curves...");
      }
+     document.getElementById("currentRad").textContent = "radius = " + z + 'mm';
 
 };
 

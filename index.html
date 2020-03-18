@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="thisApp">
+            <p id="colorCode">Hex color code</p>
+        <div type="button"  onclick="getRandomRgbNumber(), changeBgColorResult()" id="bgColor">
+        </div>
+        <div id="warning"> Dont go above 100mm Radius</div>
+        <div id="buttons">
+            <div id="radMinus" onclick='radChange(-5);' type="button">- 5</div>
+            <div id="radPlus" onclick='radChange(5) ;' type="button">+ 5</div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
